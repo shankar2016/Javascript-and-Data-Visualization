@@ -1,0 +1,23 @@
+p {
+    color: orange;
+}
+
+a {
+    color: red;
+}
+
+body {
+    font-size: 14px;
+    color: navy;
+}
+title {
+	color: violet
+}
+h1 {
+    color: yellow;
+    background-color: blue;
+}
+h2 {
+    color: green;
+    background-color: yellow;
+}

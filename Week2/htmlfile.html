@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+<style> 
+.flex-container {
+    display: -webkit-flex;
+    display: flex;  
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    text-align: center;
+}
+
+.flex-container > * {
+    padding: 15px;
+    -webkit-flex: 1 100%;
+    flex: 1 100%;
+}
+
+.article {
+    text-align: left;
+}
+
+header {background: blue;color:white;}
+footer {background: red;color:white;}
+.nav {background:#eee;
+width: 100px;
+height: 100px;
+margin: 100x;
+}
+
+.nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+.nav ul a {
+    text-decoration: none;
+}
+@media all and (min-width: 768px) {
+    .nav {text-align:left;-webkit-flex: 1 auto;flex:1 auto;-webkit-order:1;order:1;}
+    .article {-webkit-flex:5 0px;flex:5 0px;-webkit-order:2;order:2;}
+    footer {-webkit-order:3;order:3;}
+}
+</style>
+<!-- <title> Natarajan Shankar </title> -->
+<title> Natarajan Shankar </title>
+</head>
+<body>
+
+<div class="flex-container">
+<header>
+  <h1>Natarajan Shankar W209</h1>
+</header>
+
+<nav class="nav">
+        <h4>Wikipedia article on machine learning</h4>
+        <p><a href="https://en.wikipedia.org/wiki/Machine_learning">Machine Learning page in Wikipedia</a></p>
+</nav>
+
+<article class="article">
+<!-- 4x4 data table-->
+        <h2> Data Table </h2>
+<table>
+    <tr>
+        <td>Row 1, cell 1</td>
+        <td>Row 1, cell 2</td>
+        <td>Row 1, cell 3</td>
+        <td>Row 1, cell 4</td>
+    </tr>
+    <tr>
+        <td>Row 2, cell 1</td>
+        <td>Row 2, cell 2</td>
+        <td>Row 2, cell 3</td>
+        <td>Row 2, cell 4</td>
+    </tr>
+    <tr>
+        <td>Row 3, cell 1</td>
+        <td>Row 3, cell 2</td>
+        <td>Row 3, cell 3</td>
+        <td>Row 3, cell 4</td>
+    </tr>
+    <tr>
+        <td>Row 4, cell 1</td> 
+        <td>Row 4, cell 2</td>
+        <td>Row 4, cell 3</td>
+        <td>Row 4, cell 4</td>
+    </tr>
+</table>
+
+<!-- Form with text field and 2 buttons-->
+<textarea rows="5" cols="20">A big load of text</textarea>
+<h2> Text field with 2 buttons</h2>
+<select>
+    <option>Option 1</option>
+    <option>Option 2</option>
+    <option value="third option">Option 3</option>
+</select>
+
+</article>
+
+<footer>Natarajan Shankar, shankar@ischool.berkeley.edu</footer>
+</div>
+
+</body>
+</html>
