@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style_hw3.css">
+<style> 
+.flex-container {
+    display: -webkit-flex;
+    display: flex;  
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    text-align: center;
+}
+
+.flex-container > * {
+    padding: 15px;
+    -webkit-flex: 1 100%;
+    flex: 1 100%;
+}
+
+.article {
+    text-align: left;
+}
+
+header {background: blue;color:white;}
+footer {background: red;color:white;}
+.nav {background:#eee;
+width: 100px;
+height: 100px;
+margin: 100x;
+}
+
+.nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+.nav ul a {
+    text-decoration: none;
+}
+@media all and (min-width: 768px) {
+    .nav {text-align:left;-webkit-flex: 1 auto;flex:1 auto;-webkit-order:1;order:1;}
+    .article {-webkit-flex:5 0px;flex:5 0px;-webkit-order:2;order:2;}
+    footer {-webkit-order:3;order:3;}
+}
+</style>
+<!-- <title> Natarajan Shankar </title> -->
+<title> Natarajan Shankar </title>
+</head>
+<body>
+
+<div class="flex-container">
+<header>
+  <h1>Natarajan Shankar W209</h1>
+</header>
+
+<nav class="nav">
+        <h4>Wikipedia article on machine learning</h4>
+        <p><a href="https://en.wikipedia.org/wiki/Machine_learning">Machine Learning page in Wikipedia</a></p>
+</nav>
+
+<article class="article">
+
+<p>This example demonstrates how to assign an "onclick" event to a p element.</p>
+
+<p id="demo" onclick="myFunction()">Click me.</p>
+
+<script>
+function myFunction() {
+    document.getElementById("demo").innerHTML = "YOU CLICKED ME!";
+}
+</script>
+	
+	<p id="demo"></p>
+
+<input type="text" id="myText" value="Enter temperature">
+<button type="button" id="myBtn" onclick="myButtonFunction()">Convert to Farenheit</button>
+<button type="button" id="myBtn" onclick="myButtonFunction()">Convert to Centigrade</button>
+
+<script>
+	
+	
+	
+	
+function myButtonFunction() {
+	var user_input = document.getElementById("myText").value;
+    //document.write("The user Input is", user_input);
+	
+	// Separate out the letter that was in the input
+    user_input_type = user_input[user_input.length - 1]
+    //document.write("the user input type is\n", user_input_type)
+	
+	var f = parseInt(user_input);
+	switch(user_input_type) {
+		case 'C':
+			if (user_input_type == 'F') {
+				console.log("Temperature is already in degrees F");
+			} else {
+				tmp = degCtodegF(f);
+				temp = tmp.toString();
+				temp = temp.fontsize(20);
+				temp = temp.fontcolor("green");
+				//console.log("The temperature in Fahrenheit is" + temp);
+				document.write("The temperature in Fahrenheit is" + temp);
+				break;
+			}
+		case 'F':
+			if (user_input_type == 'C') {
+				console.log("Temperature is already in degrees C");
+			} else {
+				tmp = degFtodegC(f);
+				temp = tmp.toString()
+				temp = temp.fontsize(30);
+				temp = temp.fontcolor("blue");
+				//console.log("\nThe temperature in Centigrade is \n" + temp);
+				document.write("\nThe temperature in Centigrade is \n" + temp);
+
+				break;
+			}
+		case 'X':
+			exit;
+		default:
+			;
+	}
+}
+	
+function degCtodegF(degC) {
+        //document.write("the C user input is\n", degC)
+        return ((degC * 1.8) + 32);
+}
+function degFtodegC(degF) {
+        //document.write("the F user input is\n", degF)
+        return ((degF-32)/1.8);
+}
+
+</script>
+
+
+<footer>Natarajan Shankar, shankar@ischool.berkeley.edu</footer>
+</div>
+
+</body>
+</html>
